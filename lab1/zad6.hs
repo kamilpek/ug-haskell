@@ -11,4 +11,3 @@ kwad a b c =
             else
                 []
     where delta = (b*b) - (4 * a * c)
-        
