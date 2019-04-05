@@ -30,7 +30,7 @@
 :t + (f x) (g x)
 -- {f :: a -> Int, g :: a -> Int, a :: x} |- (+ (f x) (g x)) :: Int
 :t f 7 (g 'x')
--- {g :: Char -> a} |- (f 7 (g 'x')) :: Int -> a -> b
+-- {g :: Char -> a, f :: Int -> a -> b} |- (f 7 (g 'x')) :: b
 :t \f -> f (g x)
 -- {g :: a -> b, x :: a} |- (\f -> f (g x)) :: (b -> c) -> c
 :t (\f -> f (g x)) square
